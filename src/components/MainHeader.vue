@@ -43,8 +43,8 @@ export default {
       font-size: $font-size-upper;
 
       &.active, &:hover {
-        color: $bg-light-blue;
-        border-bottom: 2px solid $bg-light-blue;
+        color: $light-blue;
+        border-bottom: 2px solid $light-blue;
       }
     }
 

@@ -16,10 +16,13 @@ export default {
 </script>
 
 <style scoped lang="scss">
+
+  @import '../style/variables';
+
   .main__content {
     background-color: black;
     .container {
-      color:white;
+      color:$color-white;
       padding: 2.5rem 0;
     }
   }
