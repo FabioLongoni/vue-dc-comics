@@ -3,9 +3,9 @@
       <section class="footer__first__section">
         <div class="small__container">
           <ul>
-            <li>
-              <img src="../assets/buy-comics-digital-comics.png" alt="">
-              <a href="#">digital comics</a>
+            <li :key=card v-for="card in listCards">
+              <img :src="card.image" alt="">
+              <a href="#">{{card.text}}</a>
             </li>
           </ul>
         </div>
@@ -91,7 +91,32 @@
 
 <script>
 export default {
-
+  data() { 
+    return {
+      listCards: [
+        {
+          image: "../assets/buy-comics-digital-comics.png",
+          text: "digital comics",
+        },
+        {
+          image: "../assets/buy-comics-merchandise.png",
+          text: "dc-merchandise",
+        },
+        {
+          image: "../assets/buy-comics-subscriptions.png",
+          text: "subscriptions",
+        },
+        {
+          image: "../assets/buy-comics-shop-locator.png",
+          text: "comic shop locator",
+        },
+        {
+          image: "../assets/buy-dc-power-visa.svg",
+          text: "dc power visa",
+        }
+      ]
+    }
+  }
 }
 </script>
 
@@ -104,13 +129,15 @@ export default {
     overflow: hidden;
 
     .small__container {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 0 auto;
       padding: 2rem 0;
 
       ul {
         display: flex;
         align-items: center;
+        gap: 2rem;
+
         li {
           display:flex;
           gap: 1rem;
