@@ -1,7 +1,7 @@
 <template>
   <article class="card">
     <img :src="thumb" alt="">
-    <h3>{{ series }}</h3>
+    <div>{{ series }}</div>
   </article>
 </template>
 
@@ -20,6 +20,7 @@ export default {
   .card {
     font-size:$font-size-upper;
     text-transform: uppercase;
+    font-weight: lighter;
     cursor: pointer;
     img {
       width: 200px;

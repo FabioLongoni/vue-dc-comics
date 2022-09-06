@@ -1,11 +1,13 @@
 <template>
   <main class="main__content">
     <div class="hero">
-
+      <button id="btn__current">current series</button>
     </div>
     <div class="container container__card">
       <ProductCard v-for="(card,i) in cards" :key="i" :series="card.series" :thumb="card.thumb" />
-      
+    </div>
+    <div class="main__button container">
+      <button id="load__button"><a href="#">load more</a></button>
     </div>
   </main>
   
@@ -116,6 +118,34 @@ export default {
       height: 300px;
       background-image: url(../assets/jumbotron.jpg);
       background-size: cover;
+      background-position: top,center;
+      position: relative;
+      #btn__current {
+        position: absolute;
+        background-color:$light-blue;
+        color: $color-white;
+        padding: 0.75rem 2rem;
+        text-transform: uppercase;
+        border: none;
+        bottom: 0;
+        left: 4rem;
+        transform: translateY(+50%);
+        font-weight: bold;
+      }
+    }
+    .main__button {
+      text-align: center;
+      padding-bottom: 0.75rem;
+
+      #load__button {
+        background-color:$light-blue;
+        color: $color-white;
+        padding: 0.5rem 2.5rem;
+        text-transform: uppercase;
+        border: none;
+        font-size: $font-size-upper;
+        font-weight: bold;
+      }
     }
   }
 </style>
