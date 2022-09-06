@@ -2,13 +2,13 @@
     <footer>
       <section class="footer__first__section">
         <div class="small__container">
-        <ul>
-          <li>
-            <img src="../assets/buy-comics-digital-comics.png" alt="">
-            <a href="#">digital comics</a>
-          </li>
-        </ul>
-      </div>
+          <ul>
+            <li>
+              <img src="../assets/buy-comics-digital-comics.png" alt="">
+              <a href="#">digital comics</a>
+            </li>
+          </ul>
+        </div>
       </section>
       <section class="footer__second__section">
         <div class="container">
@@ -18,20 +18,20 @@
                 dc comics
               </h3>
               <ul>
-                <li>Characters</li>
-                <li>Comics</li>
-                <li>Movies</li>
-                <li>TV</li>
-                <li>Games</li>
-                <li>Videos</li>
-                <li>New</li>
+                <li><a href="#">Characters</a></li>
+                <li><a href="#">Comics</a></li>
+                <li><a href="#">Movies</a></li>
+                <li><a href="#">TV</a></li>
+                <li><a href="#">Games</a></li>
+                <li><a href="#">Videos</a></li>
+                <li><a href="#">New</a></li>
               </ul>
               <h3>
                 shop
               </h3>
               <ul>
-                <li>Shop DC</li>
-                <li>Shop DC Collectibles</li>
+                <li><a href="#">Shop DC</a></li>
+                <li><a href="#">Shop DC Collectibles</a></li>
               </ul>
             </div>
             <div>
@@ -39,17 +39,17 @@
                 Dc
               </h3>
               <ul>
-                <li>Terms Of Use</li>
-                <li>Privacy policy(New)</li>
-                <li>Ad choises</li>
-                <li>Advertising</li>
-                <li>Jobs</li>
-                <li>Subsccription</li>
-                <li>Talent Workshops</li>
-                <li>CPSC Certificates</li>
-                <li>Ratings</li>
-                <li>Shop Help</li>
-                <li>Contact Us</li>
+                <li><a href="#">Terms Of Use</a></li>
+                <li><a href="#">Privacy policy(New)</a></li>
+                <li><a href="#">Ad choises</a></li>
+                <li><a href="#">Advertising</a></li>
+                <li><a href="#">Jobs</a></li>
+                <li><a href="#">Subsccription</a></li>
+                <li><a href="#">Talent Workshops</a></li>
+                <li><a href="#">CPSC Certificates</a></li>
+                <li><a href="#">Ratings</a></li>
+                <li><a href="#">Shop Help</a></li>
+                <li><a href="#">Contact Us</a></li>
               </ul>
             </div>
             <div>
@@ -57,12 +57,30 @@
                 Sites
               </h3>
               <ul>
-                <li>DC</li>
-                <li>MAD Magazine</li>
-                <li>DC Kids</li>
-                <li>DC Universe</li>
-                <li>DC Power Visa</li>
+                <li><a href="#">DC</a></li>
+                <li><a href="#">AD Magazine</a></li>
+                <li><a href="#">DC Kids</a></li>
+                <li><a href="#">DC Universe</a></li>
+                <li><a href="#">DC Power Visa</a></li>
               </ul>
+            </div>
+          </div>
+          <img src="../assets/dc-logo-bg.png" alt="">
+        </div>
+      </section>
+      <section class="footer__third__section">
+        <div class="container">
+          <div class="sign__up__button">
+            <a href="#">sign-up now</a>
+          </div>
+          <div class="footer__media">
+            <span>follow us</span>
+            <div class="footer__icon">
+              <a href="#"><img src="../assets/footer-facebook.png" alt=""></a>
+              <a href="#"><img src="../assets/footer-twitter.png" alt=""></a>
+              <a href="#"><img src="../assets/footer-youtube.png" alt=""></a>
+              <a href="#"><img src="../assets/footer-pinterest.png" alt=""></a>
+              <a href="#"><img src="../assets/footer-periscope.png" alt=""></a>
             </div>
           </div>
         </div>
@@ -83,6 +101,7 @@ export default {
 
   .footer__first__section {
     background-color: $light-blue;
+    overflow: hidden;
 
     .small__container {
       max-width: 900px;
@@ -109,10 +128,16 @@ export default {
   }
   .footer__second__section {
     color: $color-white;
-    background-color: BLACK;
+    background-image: url('../assets/footer-bg.jpg');
+
 
     .container {
       padding: 2rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 320px;
+      overflow: hidden;
 
       .ul__wrapper {
         display: flex;
@@ -130,6 +155,50 @@ export default {
         }
 
       }
+      img {
+        transform: scale(0.9,0.9);
+      }
+    }
+  }
+
+  .footer__third__section {
+    background-color: #303030;
+    padding: 2rem 0;
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .footer__media {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+
+        .footer__icon {
+          display: flex;
+          gap: 1rem;
+        }
+
+        span {
+          color: $light-blue;
+          text-transform: uppercase;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .sign__up__button {
+      color: $color-white;
+      text-transform: uppercase;
+      font-size: 16px;
+      padding: 1rem 0;
+
+      a {
+        padding: 1rem;
+        border: 2px solid $light-blue;
+      }
+      
     }
   }
 </style>
