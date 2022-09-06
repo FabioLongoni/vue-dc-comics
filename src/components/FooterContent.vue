@@ -3,7 +3,7 @@
       <section class="footer__first__section">
         <div class="small__container">
           <ul>
-            <li :key=card v-for="card in listCards">
+            <li :key="i" v-for="(card,i) in listCards">
               <img :src="card.image" alt="">
               <a href="#">{{card.text}}</a>
             </li>
@@ -44,7 +44,7 @@
                 <li><a href="#">Ad choises</a></li>
                 <li><a href="#">Advertising</a></li>
                 <li><a href="#">Jobs</a></li>
-                <li><a href="#">Subsccription</a></li>
+                <li><a href="#">Subscription</a></li>
                 <li><a href="#">Talent Workshops</a></li>
                 <li><a href="#">CPSC Certificates</a></li>
                 <li><a href="#">Ratings</a></li>
@@ -90,28 +90,31 @@
 </template>
 
 <script>
+
+
+
 export default {
   data() { 
     return {
       listCards: [
         {
-          image: "../assets/buy-comics-digital-comics.png",
+          image: require("../assets/buy-comics-digital-comics.png"),
           text: "digital comics",
         },
         {
-          image: "../assets/buy-comics-merchandise.png",
-          text: "dc-merchandise",
+          image: require("../assets/buy-comics-merchandise.png"),
+          text: "dc merchandise",
         },
         {
-          image: "../assets/buy-comics-subscriptions.png",
+          image: require("../assets/buy-comics-subscriptions.png"),
           text: "subscriptions",
         },
         {
-          image: "../assets/buy-comics-shop-locator.png",
+          image: require("../assets/buy-comics-shop-locator.png"),
           text: "comic shop locator",
         },
         {
-          image: "../assets/buy-dc-power-visa.svg",
+          image: require("../assets/buy-dc-power-visa.svg"),
           text: "dc power visa",
         }
       ]
