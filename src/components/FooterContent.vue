@@ -35,11 +35,9 @@
           <div class="footer__media">
             <span>follow us</span>
             <div class="footer__icon">
-              <a href="#"><img src="../assets/footer-facebook.png" alt=""></a>
-              <a href="#"><img src="../assets/footer-twitter.png" alt=""></a>
-              <a href="#"><img src="../assets/footer-youtube.png" alt=""></a>
-              <a href="#"><img src="../assets/footer-pinterest.png" alt=""></a>
-              <a href="#"><img src="../assets/footer-periscope.png" alt=""></a>
+              <a href="#" v-for="(icon,i) in iconsList" :key="i">
+                <img :src="icon.image" alt="">
+              </a>
             </div>
           </div>
         </div>
@@ -186,6 +184,23 @@ export default {
           text: 'DC Power Visa',
           href: '#'
         }
+      ],
+      iconsList: [
+        {
+          image: require("../assets/footer-facebook.png")
+        },
+        {
+          image: require("../assets/footer-twitter.png")
+        },
+        {
+          image: require("../assets/footer-youtube.png")          
+        },
+        {
+          image: require("../assets/footer-pinterest.png")
+        },
+        {
+          image: require("../assets/footer-periscope.png")
+        },
       ]
     }
   }
